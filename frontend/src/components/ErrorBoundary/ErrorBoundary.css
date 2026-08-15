@@ -1,0 +1,57 @@
+.global-error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: #f4f7fb;
+}
+
+.global-error-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 36px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.global-error-card h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 26px;
+}
+
+.global-error-card p {
+    margin: 12px 0 24px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.global-error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.global-error-actions button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.global-error-actions button:first-child {
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.global-error-actions button:last-child {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #475569;
+}

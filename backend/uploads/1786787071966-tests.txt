@@ -1,0 +1,13 @@
+IncidentHub Attachment Test
+
+Incident: Database query problem
+Severity: Pos2
+Status: Investigating
+
+Test Log:
+2026-08-12 20:30:01 INFO  Payment API request received
+2026-08-12 20:30:03 WARN  Database query response is slow
+2026-08-12 20:30:07 ERROR Payment API response exceeded 5 seconds
+2026-08-12 20:30:08 ERROR Database query latency detected
+
+This file is created only for testing the IncidentHub attachment upload API.

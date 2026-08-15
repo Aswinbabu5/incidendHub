@@ -1,0 +1,21 @@
+import axios from "axios"
+
+export const getErrorMessage = (
+    error: unknown,
+    fallback = "Something went wrong"
+): string => {
+
+    if (axios.isAxiosError(error)) {
+        return (
+            error.response?.data?.message ||
+            error.response?.data?.error ||
+            fallback
+        )
+    }
+
+    if (error instanceof Error) {
+        return error.message
+    }
+
+    return fallback
+}
