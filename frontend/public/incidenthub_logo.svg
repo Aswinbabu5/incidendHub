@@ -1,0 +1,55 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="100" x2="900" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A2A5C"/>
+      <stop offset="1" stop-color="#061A3A"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="260" y1="300" x2="760" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39A0FF"/>
+      <stop offset="1" stop-color="#0067E8"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="480" y1="340" x2="590" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB02E"/>
+      <stop offset="1" stop-color="#FF7A00"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="70" y="70" width="884" height="884" rx="160" fill="url(#bg)"/>
+
+  <g transform="translate(210 300) rotate(-4 130 180)">
+    <rect x="0" y="60" width="230" height="300" rx="18" fill="#F7FAFF"/>
+    <rect x="65" y="5" width="100" height="70" rx="20" fill="url(#blue)"/>
+    <rect x="45" y="125" width="135" height="14" rx="7" fill="#0B2B61"/>
+    <rect x="45" y="168" width="135" height="14" rx="7" fill="#0B2B61"/>
+    <rect x="45" y="211" width="135" height="14" rx="7" fill="#0B2B61"/>
+    <circle cx="105" cy="287" r="42" fill="#1558C9"/>
+    <path d="M86 287L100 301L126 271" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(690 360)">
+    <circle cx="95" cy="95" r="83" fill="url(#blue)"/>
+    <circle cx="95" cy="95" r="38" fill="#0A2A5C"/>
+    <g fill="url(#blue)">
+      <rect x="82" y="-10" width="26" height="44" rx="6"/>
+      <rect x="82" y="156" width="26" height="44" rx="6"/>
+      <rect x="-10" y="82" width="44" height="26" rx="6"/>
+      <rect x="156" y="82" width="44" height="26" rx="6"/>
+    </g>
+  </g>
+
+  <path d="M512 225C560 268 616 292 680 302V444C680 574 605 673 512 726C419 673 344 574 344 444V302C408 292 464 268 512 225Z"
+        fill="#0C2C61" stroke="white" stroke-width="18" stroke-linejoin="round"/>
+
+  <path d="M512 340L615 525H409L512 340Z" fill="url(#orange)" stroke="#F39A13" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="500" y="407" width="24" height="72" rx="12" fill="white"/>
+  <circle cx="512" cy="505" r="13" fill="white"/>
+
+  <text x="188" y="826" font-family="Arial, sans-serif" font-size="88" font-weight="700" fill="white">Incident</text>
+  <text x="601" y="826" font-family="Arial, sans-serif" font-size="88" font-weight="700" fill="#1492FF">Hub</text>
+
+  <text x="258" y="875" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="8" fill="white">TRACK</text>
+  <circle cx="430" cy="867" r="6" fill="#FF8A00"/>
+  <text x="458" y="875" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="8" fill="white">MANAGE</text>
+  <circle cx="687" cy="867" r="6" fill="#FF8A00"/>
+  <text x="714" y="875" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="8" fill="white">RESOLVE</text>
+</svg>
