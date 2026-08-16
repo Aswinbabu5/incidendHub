@@ -6,6 +6,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
 import { getSlaStatus } from '../../Utils/sla'
 import { getErrorMessage } from '../../Utils/errorHandler'
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
+import Loading from '../../components/Loading/Loading'
 
 const Incident = () => {
     const [incident, setIncident] = useState<Incidents[]>([])
@@ -89,12 +91,20 @@ const Incident = () => {
         }
     }, [search])
 
-    if (loading)
-        return <p>Loading Incident...</p>
-
-    if (error)
-        return <p>{error}</p>
-
+    if (loading) {
+        <>
+            <Navbar />
+            <Loading text='Loading Incident...' />
+        </>
+    }
+        
+    if (error) {
+        <>
+            <Navbar />
+            <ErrorMessage message={error} />
+        </>
+    }
+        
     return (
         <>
             <Navbar />

@@ -14,6 +14,8 @@ import { deleteAttachment, downloadAttachment, getAttachment, uploadAttachment }
 import type { SLAData } from "../../Types/sla"
 import { getIncidentSLA } from "../../API/slaApi"
 import { getErrorMessage } from "../../Utils/errorHandler"
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage"
+import Loading from "../../components/Loading/Loading"
 
 const IncidentDetail = () => {
     const { id } = useParams()
@@ -231,11 +233,20 @@ const IncidentDetail = () => {
 
     const fileInputRef = useRef<HTMLInputElement>(null)
 
-    if (loading)
-        return <p>Loading I_Details...</p>
-
-    if (error)
-        return <p className="action-error">{error}</p>
+    if (loading) {
+        <>
+            <Navbar />
+            <Loading text="Loading I_Details..." />
+        </>
+    }
+        
+    if (error) {
+        <>
+            <Navbar />
+            <ErrorMessage message={error} />
+        </>
+    }
+        
 
     if (!incident)
         return <p>Incident not found</p>

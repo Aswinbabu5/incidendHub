@@ -8,6 +8,8 @@ import getIncident from '../../API/IncidentApi'
 import { getSlaStatus } from '../../Utils/sla'
 import type { Incidents } from '../../Types/Incidents'
 import { getErrorMessage } from '../../Utils/errorHandler'
+import Loading from '../../components/Loading/Loading'
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 
 const Dashboard = () => {
   const [stats, setStats] = useState<IncidentStats | null>(null)
@@ -71,13 +73,21 @@ const Dashboard = () => {
     fetchStat()
   }, [])
 
-  if (loading)
-    return <p>Loading Dashboard...</p>
+  if (loading) {
+    <>
+      <Navbar />
+      <Loading text='Loading Dashboard...' />
+    </>
+  }
+    
 
-  if (error)
-    return <p>{error}</p>
-
-
+  if (error) {
+    <>
+      <Navbar />
+      <ErrorMessage message={error} />
+    </>
+  }
+    
   return (
     <>
       <Navbar />

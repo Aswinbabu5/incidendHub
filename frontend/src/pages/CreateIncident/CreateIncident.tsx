@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import { cretIncident } from '../../API/IncidentApi'
 import './CreateIncident.css'
 import { getErrorMessage } from '../../Utils/errorHandler'
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
+import Loading from '../../components/Loading/Loading'
 
 const CreateIncident = () => {
     const navigate = useNavigate()
@@ -30,6 +32,21 @@ const CreateIncident = () => {
             setLoading(false)
         }
     }
+
+    if(loading) {
+        <>
+            <Navbar />
+            <Loading text='Loading...' />
+        </>
+    }
+        
+    if(error) {
+        <>
+            <Navbar />
+            <ErrorMessage message={error} />
+        </>
+    }
+        
     return (
         <>
             <Navbar />

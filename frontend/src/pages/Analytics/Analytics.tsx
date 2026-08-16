@@ -27,6 +27,8 @@ import {
 import "./Analytics.css"
 import type { EngineerWorkloadItem, IncidentPerDayItem, SeverityAnalyticsItem } from "../../Types/SevAnalytics"
 import { getErrorMessage } from "../../Utils/errorHandler"
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage"
+import Loading from "../../components/Loading/Loading"
 const slaColor = ["#16a34a", "#dc2626", "#22c55e", "#ef4444"]
 const severityColor = ["#dc2626", "#f97316", "#eab308", "#16a34a"]
 const workloadColor = ["#2563eb", "#7c3aed", "#0891b2", "#0f766e", "#c2410c"]
@@ -105,7 +107,7 @@ const Analytics = () => {
         return (
             <>
                 <Navbar />
-                <div className="analytics-message">Loading analytics...</div>
+                <Loading text="Loading Analytics..."/>
             </>
         )
     }
@@ -114,7 +116,7 @@ const Analytics = () => {
         return (
             <>
                 <Navbar />
-                <div className="analytics-message">{error}</div>
+                <ErrorMessage message={error}/>
             </>
         )
     }
